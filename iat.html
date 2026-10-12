@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><title>WSOCK32 ithalat isaretcileri</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #07080f; color: #e8e6f2;
+  font: 15px/1.5 "Segoe UI", system-ui, sans-serif; }
+header { padding: 22px 26px 16px; background: linear-gradient(180deg, #12101c, #07080f);
+  border-bottom: 1px solid #2a2440; }
+h1 { margin: 0 0 6px; font-size: 22px; letter-spacing: .3px;
+  background: linear-gradient(90deg, #5ef2ff, #d46bff); -webkit-background-clip: text;
+  background-clip: text; color: transparent; }
+.alt { color: #9a94b0; margin: 0; max-width: 78ch; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 26px 0; }
+nav a { color: #5ef2ff; text-decoration: none; border: 1px solid #2c3d55;
+  border-radius: 999px; padding: 4px 10px; font-size: 13px; }
+nav a:hover { border-color: #d46bff; color: #f0c4ff; }
+main { padding: 8px 22px 40px; }
+.not { color: #b7b0cc; max-width: 82ch; }
+.kutu { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+.rozet { background: #12141f; border: 1px solid #2a2440; border-radius: 8px;
+  padding: 8px 10px; font-size: 13px; }
+.rozet b { color: #5ef2ff; font-family: Consolas, ui-monospace, monospace; }
+input.ara { width: min(420px, 100%); margin: 12px 0; background: #0c0e16; color: #f4f1ff;
+  border: 1px solid #3a2f55; border-radius: 8px; padding: 8px 12px; font: inherit; }
+input.ara:focus { outline: 2px solid #5ef2ff; border-color: transparent; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; vertical-align: top; border-bottom: 1px solid #1c2030; }
+th { position: sticky; top: 0; background: #12101c; color: #d46bff; font-size: 12px;
+  letter-spacing: .05em; text-transform: uppercase; }
+tr:hover td { background: #14122a; }
+.adr { font-family: Consolas, ui-monospace, monospace; color: #5ef2ff; white-space: nowrap; }
+.ad { color: #f2e7ff; font-weight: 650; }
+.tur { color: #c6ff6a; font-family: Consolas, ui-monospace, monospace; font-size: 13px; }
+.zayif { color: #8d87a3; }
+footer { color: #6e6880; font-size: 12px; padding: 8px 26px 28px; }
+</style></head><body>
+<header><h1>WSOCK32 ithalat isaretcileri</h1>
+<p class="alt">KnightOnLine.exe · 10.299.392 bayt · 32-bit · ImageBase 0x400000 · ASLR kapalı, taban hep 0x400000.</p>
+</header>
+<nav><a href="opcode_yonlendirme.html" style="">Opcode → fonksiyon</a><a href="index.html" style="">Giriş</a><a href="fonksiyonlar.html" style="">Fonksiyonlar</a><a href="isaretciler.html" style="">İşaretçiler</a><a href="iat.html" style="border-color:#d46bff;color:#f0c4ff">IAT</a><a href="soket_ofsetleri.html" style="">Soket ofsetleri</a><a href="tbl_kripto.html" style="">TBL kripto</a><a href="opcode.html" style="">Opcode</a></nav>
+<main>
+<p class="not">IAT, exe'nin Windows fonksiyonlarini cagirmak icin tuttugu isaretci tablosudur. Buradaki adresin icinde, Windows'un gercek fonksiyon adresi durur. Ord, WSOCK32'nin isimsiz ithalat numarasi.</p>
+<table><thead><tr><th>IAT adresi</th><th>Fonksiyon</th><th>Not</th></tr></thead><tbody><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a600&lt;/span&gt; socket wsock32 ord 23"><td class="adr"><span class="adr">0xC6A600</span></td><td class="ad">socket</td><td class="">WSOCK32 ord 23</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a610&lt;/span&gt; connect ord 4"><td class="adr"><span class="adr">0xC6A610</span></td><td class="ad">connect</td><td class="">ord 4</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a60c&lt;/span&gt; wsaasyncselect ord 101"><td class="adr"><span class="adr">0xC6A60C</span></td><td class="ad">WSAAsyncSelect</td><td class="">ord 101</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a618&lt;/span&gt; send ord 19"><td class="adr"><span class="adr">0xC6A618</span></td><td class="ad">send</td><td class="">ord 19</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a628&lt;/span&gt; recv ord 16"><td class="adr"><span class="adr">0xC6A628</span></td><td class="ad">recv</td><td class="">ord 16</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a620&lt;/span&gt; ioctlsocket ord 12"><td class="adr"><span class="adr">0xC6A620</span></td><td class="ad">ioctlsocket</td><td class="">ord 12</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a61c&lt;/span&gt; closesocket ord 3"><td class="adr"><span class="adr">0xC6A61C</span></td><td class="ad">closesocket</td><td class="">ord 3</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a614&lt;/span&gt; htons ord 9"><td class="adr"><span class="adr">0xC6A614</span></td><td class="ad">htons</td><td class="">ord 9</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a62c&lt;/span&gt; ntohl ord 14, tbl boyut alanini cevirir"><td class="adr"><span class="adr">0xC6A62C</span></td><td class="ad">ntohl</td><td class="">ord 14, tbl boyut alanini cevirir</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a5f8&lt;/span&gt; inet_addr ord 10"><td class="adr"><span class="adr">0xC6A5F8</span></td><td class="ad">inet_addr</td><td class="">ord 10</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a5fc&lt;/span&gt; gethostbyname ord 52"><td class="adr"><span class="adr">0xC6A5FC</span></td><td class="ad">gethostbyname</td><td class="">ord 52</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a608&lt;/span&gt; setsockopt ord 21"><td class="adr"><span class="adr">0xC6A608</span></td><td class="ad">setsockopt</td><td class="">ord 21</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a604&lt;/span&gt; wsagetlasterror ord 111"><td class="adr"><span class="adr">0xC6A604</span></td><td class="ad">WSAGetLastError</td><td class="">ord 111</td></tr></tbody></table></main>
+<footer>Salt okuma notu. Adresler bu exe içindir. Başka sürümde kayar.</footer>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a499470d2b8be346',t:'MTc5MTg0MTM3OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body></html>

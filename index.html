@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><title>Adres defteri</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #07080f; color: #e8e6f2;
+  font: 15px/1.5 "Segoe UI", system-ui, sans-serif; }
+header { padding: 22px 26px 16px; background: linear-gradient(180deg, #12101c, #07080f);
+  border-bottom: 1px solid #2a2440; }
+h1 { margin: 0 0 6px; font-size: 22px; letter-spacing: .3px;
+  background: linear-gradient(90deg, #5ef2ff, #d46bff); -webkit-background-clip: text;
+  background-clip: text; color: transparent; }
+.alt { color: #9a94b0; margin: 0; max-width: 78ch; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 26px 0; }
+nav a { color: #5ef2ff; text-decoration: none; border: 1px solid #2c3d55;
+  border-radius: 999px; padding: 4px 10px; font-size: 13px; }
+nav a:hover { border-color: #d46bff; color: #f0c4ff; }
+main { padding: 8px 22px 40px; }
+.not { color: #b7b0cc; max-width: 82ch; }
+.kutu { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+.rozet { background: #12141f; border: 1px solid #2a2440; border-radius: 8px;
+  padding: 8px 10px; font-size: 13px; }
+.rozet b { color: #5ef2ff; font-family: Consolas, ui-monospace, monospace; }
+input.ara { width: min(420px, 100%); margin: 12px 0; background: #0c0e16; color: #f4f1ff;
+  border: 1px solid #3a2f55; border-radius: 8px; padding: 8px 12px; font: inherit; }
+input.ara:focus { outline: 2px solid #5ef2ff; border-color: transparent; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; vertical-align: top; border-bottom: 1px solid #1c2030; }
+th { position: sticky; top: 0; background: #12101c; color: #d46bff; font-size: 12px;
+  letter-spacing: .05em; text-transform: uppercase; }
+tr:hover td { background: #14122a; }
+.adr { font-family: Consolas, ui-monospace, monospace; color: #5ef2ff; white-space: nowrap; }
+.ad { color: #f2e7ff; font-weight: 650; }
+.tur { color: #c6ff6a; font-family: Consolas, ui-monospace, monospace; font-size: 13px; }
+.zayif { color: #8d87a3; }
+footer { color: #6e6880; font-size: 12px; padding: 8px 26px 28px; }
+</style></head><body>
+<header><h1>Adres defteri</h1>
+<p class="alt">KnightOnLine.exe · 10.299.392 bayt · 32-bit · ImageBase 0x400000 · ASLR kapalı, taban hep 0x400000.</p>
+</header>
+<nav><a href="index.html" style="border-color:#d46bff;color:#f0c4ff">Giriş</a><a href="opcode_yonlendirme.html" style="">Opcode → fonksiyon</a><a href="fonksiyonlar.html" style="">Fonksiyonlar</a><a href="isaretciler.html" style="">İşaretçiler</a><a href="iat.html" style="">IAT</a><a href="soket_ofsetleri.html" style="">Soket ofsetleri</a><a href="tbl_kripto.html" style="">TBL kripto</a><a href="opcode.html" style="">Opcode adları</a></nav>
+<main>
+<p class="not">Calisan adres, tablodaki VA sutunudur. Taban 0x400000 ve ASLR kapali. Ustune ekleme yapma. Send paketi <span class="adr">0x4A5C40</span>. Opcode'un gittigi yer <a href="opcode_yonlendirme.html">opcode yonlendirme</a> sayfasinda.</p>
+<div class="kutu"><a href="fonksiyonlar.html" style="text-decoration:none;color:inherit"><div class="rozet" style="min-width:240px"><div class="ad">Fonksiyonlar</div><div class="zayif">Send, Receive, dispatch ve tbl cozucu. RVA + VA.</div></div></a><a href="isaretciler.html" style="text-decoration:none;color:inherit"><div class="rozet" style="min-width:240px"><div class="ad">Isaretciler</div><div class="zayif">Soket, sahne, sifre nesnesi, son opcode.</div></div></a><a href="iat.html" style="text-decoration:none;color:inherit"><div class="rozet" style="min-width:240px"><div class="ad">IAT</div><div class="zayif">send, recv, connect, ntohl ithalat adresleri.</div></div></a><a href="soket_ofsetleri.html" style="text-decoration:none;color:inherit"><div class="rozet" style="min-width:240px"><div class="ad">Soket ofsetleri</div><div class="zayif">Nesnenin ici: tampon, port, kuyruk.</div></div></a><a href="tbl_kripto.html" style="text-decoration:none;color:inherit"><div class="rozet" style="min-width:240px"><div class="ad">TBL kripto</div><div class="zayif">Sihir, tuz, S-kutu, XOR sabitleri.</div></div></a><a href="opcode_yonlendirme.html" style="text-decoration:none;color:inherit"><div class="rozet" style="min-width:240px"><div class="ad">Opcode → fonksiyon</div><div class="zayif">Oyun içi 0x572B20. Bulunanlar ve hâlâ işlenmeyenler.</div></div></a><a href="opcode.html" style="text-decoration:none;color:inherit"><div class="rozet" style="min-width:240px"><div class="ad">Opcode adları</div><div class="zayif">147 isim. 0x92–0xFD açık kaynakta yok.</div></div></a></div>
+<p class="not">Paket teli: <span class="adr">AA 55</span> baslik, uzunluk, sifreli yuk, <span class="adr">55 AA</span> kuyruk. El sikisma aciksa yukun 5. bayti sayactir. Sayac <span class="adr">0xF5108D</span>.</p>
+</main>
+<footer>Salt okuma notu. Adresler bu exe içindir. Başka sürümde kayar.</footer>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a49946efef88e346',t:'MTc5MTg0MTM3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body></html>

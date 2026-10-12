@@ -1,0 +1,128 @@
+opcode,isim,aciklama
+0x01,WIZ_LOGIN,Account Login
+0x02,WIZ_NEW_CHAR,Create Character DB
+0x03,WIZ_DEL_CHAR,Delete Character DB
+0x04,WIZ_SEL_CHAR,Select Character
+0x05,WIZ_SEL_NATION,Select Nation
+0x06,WIZ_MOVE,Move ( 1 Second )
+0x07,WIZ_USER_INOUT,User Info Insert; delete
+0x08,WIZ_ATTACK,General Attack
+0x09,WIZ_ROTATE,Rotate
+0x0A,WIZ_NPC_INOUT,Npc Info Insert; delete
+0x0B,WIZ_NPC_MOVE,Npc Move ( 1 Second )
+0x0C,WIZ_ALLCHAR_INFO_REQ,Account All Character Info Request
+0x0D,WIZ_GAMESTART,Request Other User; Npc Info
+0x0E,WIZ_MYINFO,User Detail Data Download
+0x0F,WIZ_LOGOUT,Request Logout
+0x10,WIZ_CHAT,User Chatting..
+0x11,WIZ_DEAD,User Dead
+0x12,WIZ_REGENE,User	Regeneration
+0x13,WIZ_TIME,Game Timer
+0x14,WIZ_WEATHER,Game Weather
+0x15,WIZ_REGIONCHANGE,Region UserInfo Receive
+0x16,WIZ_REQ_USERIN,Client Request UnRegistered User List
+0x17,WIZ_HP_CHANGE,Current HP Download
+0x18,WIZ_MSP_CHANGE,Current MP Download
+0x19,WIZ_ITEM_LOG,Send To Agent for Writing Log
+0x1A,WIZ_EXP_CHANGE,Current EXP Download
+0x1B,WIZ_LEVEL_CHANGE,Max HP; MP; SP; Weight; Exp Download
+0x1C,WIZ_NPC_REGION,Npc Region Change Receive
+0x1D,WIZ_REQ_NPCIN,Client Request UnRegistered NPC List
+0x1E,WIZ_WARP,User Remote Warp
+0x1F,WIZ_ITEM_MOVE,User Item Move
+0x20,WIZ_NPC_EVENT,User Click Npc Event
+0x21,WIZ_ITEM_TRADE,Item Trade
+0x22,WIZ_TARGET_HP,Attack Result Target HP
+0x23,WIZ_ITEM_DROP,Zone Item Insert
+0x24,WIZ_BUNDLE_OPEN_REQ,Zone Item list Request
+0x25,WIZ_TRADE_NPC,ITEM Trade start
+0x26,WIZ_ITEM_GET,Zone Item Get
+0x27,WIZ_ZONE_CHANGE,Zone Change
+0x28,WIZ_POINT_CHANGE,Str; Sta; dex; intel; cha; point up down
+0x29,WIZ_STATE_CHANGE,User Sitdown or Stand
+0x2A,WIZ_LOYALTY_CHANGE,Nation Contribution
+0x2B,WIZ_VERSION_CHECK,Client version check
+0x2C,WIZ_CRYPTION,Cryption
+0x2D,WIZ_USERLOOK_CHANGE,User Slot Item Resource Change
+0x2E,WIZ_NOTICE,Update Notice Alarm
+0x2F,WIZ_PARTY,Party Related Packet
+0x30,WIZ_EXCHANGE,Exchange Related Packet
+0x31,WIZ_MAGIC_PROCESS,Magic Related Packet
+0x32,WIZ_SKILLPT_CHANGE,User changed particular skill point
+0x33,WIZ_OBJECT_EVENT,Map Object Event Occur ( ex : Bind Point Setting )
+0x34,WIZ_CLASS_CHANGE,10 level over can change class
+0x35,WIZ_CHAT_TARGET,Select Private Chanting User
+0x36,WIZ_CONCURRENTUSER,Current Game User Count
+0x37,WIZ_DATASAVE,User GameData DB Save Request
+0x38,WIZ_DURATION,Item Durability Change
+0x39,WIZ_TIMENOTIFY,Time Adaption Magic Time Notify Packet ( 2 Seconds )
+0x3A,WIZ_REPAIR_NPC,Item Trade; Upgrade and Repair
+0x3B,WIZ_ITEM_REPAIR,Item Repair Processing
+0x3C,WIZ_KNIGHTS_PROCESS,Knights Related Packet..
+0x3D,WIZ_ITEM_COUNT_CHANGE,Item cout change.
+0x3E,WIZ_KNIGHTS_LIST,All Knights List Info download
+0x3F,WIZ_ITEM_REMOVE,Item Remove from inventory
+0x40,WIZ_OPERATOR,Operator Authority Packet
+0x41,WIZ_SPEEDHACK_CHECK,Speed Hack Using Check
+0x42,WIZ_COMPRESS_PACKET,Data Compressing Packet
+0x43,WIZ_SERVER_CHECK,Server Status Check Packet
+0x44,WIZ_CONTINOUS_PACKET,Region Data Packet
+0x45,WIZ_WAREHOUSE,Warehouse Open; In; Out
+0x46,WIZ_SERVER_CHANGE,When you change the server
+0x47,WIZ_REPORT_BUG,Report Bug to the manager
+0x48,WIZ_HOME,'Come back home' by Seo Taeji & Boys
+0x49,WIZ_FRIEND_PROCESS,Get the status of your friend
+0x4A,WIZ_GOLD_CHANGE,When you get the gold of your enemy.
+0x4B,WIZ_WARP_LIST,Warp List by NPC or Object
+0x4C,WIZ_VIRTUAL_SERVER,Battle zone Server Info packet	(IP; Port)
+0x4D,WIZ_ZONE_CONCURRENT,Battle zone concurrent users request packet
+0x4E,WIZ_CORPSE,To have your corpse have an ID on top of it.
+0x4F,WIZ_PARTY_BBS,For the party wanted bulletin board service..
+0x50,WIZ_LOGIN_INFO,TODO: Move to its own opcode enum (Aujard only)
+0x50,WIZ_MARKET_BBS,For the market bulletin board service...
+0x51,WIZ_KICKOUT,Account ID forbid duplicate connection
+0x52,WIZ_CLIENT_EVENT,Client Event (for quest)
+0x53,WIZ_MAP_EVENT,클라이언트에서 무슨 에코로 쓰고 있데요.
+0x54,WIZ_WEIGHT_CHANGE,Notify change of weight
+0x55,WIZ_SELECT_MSG,Select Event Message...
+0x56,WIZ_NPC_SAY,Select Event Message...
+0x57,WIZ_BATTLE_EVENT,Battle Event Result
+0x58,WIZ_AUTHORITY_CHANGE,Authority change
+0x59,WIZ_EDIT_BOX,Activate/Receive info from Input_Box.
+0x5A,WIZ_SANTA,Activate motherfucking Santa Claus!!! :(
+0x5B,WIZ_ITEM_UPGRADE,
+0x5C,WIZ_PACKET1,
+0x5D,WIZ_PACKET2,
+0x5E,WIZ_ZONEABILITY,
+0x5F,WIZ_EVENT,
+0x60,WIZ_STEALTH,stealth related.
+0x61,WIZ_ROOM_PACKETPROCESS,room system
+0x62,WIZ_ROOM,
+0x63,WIZ_ROOM_MATCH,
+0x64,WIZ_QUEST,
+0x65,WIZ_PP_CARD,
+0x66,WIZ_KISS,
+0x67,WIZ_RECOMMEND_USER,
+0x68,WIZ_MERCHANT,
+0x69,WIZ_MERCHANT_INOUT,
+0x6A,WIZ_SHOPPING_MALL,
+0x6B,WIZ_SERVER_INDEX,
+0x6C,WIZ_EFFECT,
+0x6D,WIZ_SIEGE,
+0x6E,WIZ_NAME_CHANGE,
+0x6F,WIZ_WEBPAGE,
+0x70,WIZ_CAPE,
+0x71,WIZ_PREMIUM,
+0x72,WIZ_HACKTOOL,
+0x73,WIZ_RENTAL,
+0x74,WIZ_REWARD_ITEMS,
+0x75,WIZ_CHALLENGE,
+0x76,WIZ_PET,
+0x77,WIZ_CHINA,we shouldn't need to worry about this
+0x78,WIZ_KING,
+0x79,WIZ_SKILLDATA,
+0x7A,WIZ_PROGRAMCHECK,
+0x7B,WIZ_BIFROST,
+0x7F,WIZ_SERVER_KILL,
+0xFE,WIZ_DEBUG_STRING_PACKET,
+0xFF,WIZ_TEST_PACKET,Test packet
