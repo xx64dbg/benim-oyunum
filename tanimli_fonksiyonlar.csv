@@ -1,0 +1,28 @@
+rva,ce_adresi,kimlik,aciklama,kanit
+A5C40,KnightOnLine.exe+A5C40,CAPISocket::Send,"Paket gonderme (AA55 baslik, sifreleme, 55AA, send dongusu)",496 cagri yeri
+A7160,KnightOnLine.exe+A7160,CAPISocket::Receive,Recv dongusu: FIONREAD -> recv -> halka tampon,6 cagri yeri
+D6950,KnightOnLine.exe+D6950,Paket kuyrugu dispatch,"Kuyruktan paket alir, aktif sahnenin vtable[2] slotunu cagirir",0x1B521C'den cagrilir
+DA450,KnightOnLine.exe+DA450,CGameProcedure::ProcessPacket,Taban opcode switch (0x01-0xFE); tablo 4DA76C/4DA794,0xF0870'ten cagrilir
+F0870,KnightOnLine.exe+F0870,CGameProcMain::PacketProcess,Oyun ici opcode switch (0x02-0x6E); tablo 4F0A2C/4F0A50,vtable C6FFA4 slot2
+A5290,KnightOnLine.exe+A5290,Packet opcode okuma,Paketin ilk baytini (opcode) dondurur,dispatch'lerde ilk cagri
+6981D0,KnightOnLine.exe+6981D0,Paket sifreleme/insa,Send icinden 10 argumanla cagrilir,0xA5EAB
+782250,KnightOnLine.exe+782250,CRT memmove,Bellek kopyalama,standart CRT
+A56E0,KnightOnLine.exe+A56E0,Connect,"inet_addr/gethostbyname, socket, WSAAsyncSelect(WM 0x41F), connect",WSOCK32 zinciri
+A6560,KnightOnLine.exe+A6560,Disconnect/Release,"closesocket, tampon sifirlama, anahtar reset",anahtar sabitleri
+DDBC0,KnightOnLine.exe+DDBC0,Bolge baglanti kuruclu,"Sifre init, port yazimi (+400D8), mod sifirlama (+400DC)",0xDDD8E
+7801A0,KnightOnLine.exe+7801A0,Sifre SetKey/Init,this=0xED03E0,3 cagri yeri
+780180,KnightOnLine.exe+780180,Sifre Reset,this=0xED03E0,3 cagri yeri
+7801C0,KnightOnLine.exe+7801C0,Sifre Clear,this=0xED03E0,5 cagri yeri
+780C76,KnightOnLine.exe+780C76,Zamanlayici calistirici,10 slotlu periyodik geri-cagri listesi 0xF5F624,tek call [eax*4+disp]
+D6250,KnightOnLine.exe+D6250,Sahne kaydedici,Aktif CGameProcedure'i [0xF50FF0]'a yazar,WindowProc zinciri
+16CC50,KnightOnLine.exe+16CC50,CharSelect recv isleyici,Karakter secimi sahnesi,recv cagrisi 0x16D0DB
+5902F0,KnightOnLine.exe+5902F0,Login yanit ayristirici,Login paketi parse,recv cagrisi 0x5907CF
+593520,KnightOnLine.exe+593520,Login-alt ayristirici A,Login sonrasi parse,recv cagrisi 0x593988
+593B10,KnightOnLine.exe+593B10,Login-alt ayristirici B,Login sonrasi parse,recv cagrisi 0x593F78
+6990A0,KnightOnLine.exe+6990A0,Ek recv isleyici,-,recv cagrisi 0x699609
+108A1C,KnightOnLine.exe+108A1C,WindowProc WM41F-1,Pencere mesaji karsilastirma,cmp 0x41F
+108C1F,KnightOnLine.exe+108C1F,WindowProc WM41F-2,Pencere mesaji karsilastirma,cmp 0x41F
+41E47B,KnightOnLine.exe+41E47B,WindowProc WM41F-3,Pencere mesaji karsilastirma,cmp 0x41F
+422B64,KnightOnLine.exe+422B64,WindowProc WM41F-4,Pencere mesaji karsilastirma,cmp 0x41F
+A5B50,KnightOnLine.exe+A5B50,Kritik bolum init,Send ilk kullanımda,0xA5D1B
+A4960,KnightOnLine.exe+A4960,Ag sifirlama (Release),Tampon/anahtar sifirlama,0xD4610 benzeri zincir

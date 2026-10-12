@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Skill tablosu sütun sözlüğü</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #12140f; color: #e7e1d1;
+    font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+  }
+  header, main { padding: 18px 22px; }
+  header { background: #1b1e16; border-bottom: 1px solid #3a3f2e; }
+  h1 { margin: 0 0 6px; font-size: 22px; }
+  h2 { margin: 28px 0 8px; font-size: 17px; color: #f0e2c0; }
+  p { margin: 8px 0; max-width: 78ch; }
+  .muted { color: #a39b86; }
+  .ornek {
+    display: flex; gap: 12px; flex-wrap: wrap; margin: 14px 0 6px;
+  }
+  .kart {
+    background: #1c2118; border: 1px solid #3a3f2e; border-radius: 10px;
+    padding: 10px 12px; min-width: 220px;
+  }
+  .kart b { color: #c6a15a; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th, td { text-align: left; padding: 8px 10px; vertical-align: top; border-bottom: 1px solid #2a2f22; }
+  th { color: #c6a15a; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+  td.no { color: #d7c49a; font-variant-numeric: tabular-nums; width: 4.2em; }
+  td.ad { font-weight: 650; white-space: nowrap; }
+  tr.emin td { background: #171c14; }
+  tr.suphe td { background: #1c1914; }
+  .rozet {
+    display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 999px;
+    border: 1px solid #4a5138; color: #c6a15a;
+  }
+  code { color: #f0e2c0; }
+  ul { margin: 6px 0 6px 18px; max-width: 78ch; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Sütun 5 neden 26, neden 24?</h1>
+  <p class="muted">skill_magic_main_us.tbl · 3.678 satır · salt okuma. İsimler, açık kaynak istemci yapısıyla (<code>__TABLE_UPC_SKILL</code>) ve senin dosyandaki bilinen skillerle karşılaştırılarak kondu.</p>
+</header>
+<main>
+  <p>Sütun 5 bir sınıf ya da “skill türü” değil. <b>Karakterin skill’e basınca oynattığı hareketin numarası.</b> Aynı hareketi kullanan skiller aynı sayıyı paylaşır. Bu yüzden alt alta 26, 24, 24 görürsün: o satırlar aynı animasyonu çalıyor.</p>
+  <div class="ornek">
+    <div class="kart"><b>26</b> — vuruş hareketi<br>stroke, Slash, Crash</div>
+    <div class="kart"><b>24</b> — kendi üstüne buff hareketi<br>Sprint, Defense</div>
+    <div class="kart"><b>16</b> — büyü basma hareketi<br>Lightning, Minor Healing</div>
+    <div class="kart"><b>18</b> — gizlenme hareketi<br>Stealth</div>
+    <div class="kart"><b>−1</b> — hareket yok<br>727 skill (çoğu yazıt / pasif)</div>
+  </div>
+  <p>Yani “26 ne skill’i?” diye bakılmaz. “Bu skill hangi hareketi oynatıyor?” diye bakılır. Hasar, menzil, bekleme başka sütunlarda.</p>
+
+  <h2>Süre birimi</h2>
+  <p>Hazırlık ve bekleme bu dosyada <b>0,1 saniye</b> cinsinden duruyor. 15 = 1,5 saniye, 60 = 6 saniye, 600 = 60 saniye. Kontrol: Minor Healing hazırlık 15 ve bekleme 20; Lightning hazırlık 15, bekleme 43; Counter Strike bekleme 600. Resmi kaynak skill için birimi tek cümleyle yazmıyor; bu okuma, bilinen sürelerle örtüşüyor.</p>
+
+  <h2>37 sütunun hepsi</h2>
+  <p class="muted">Yeşilimsi satır: anlamı hem kaynak yapıda hem senin dosyanda doğrulandı. Kahverengi satır: bu sürümde var, ama adını kesin koyamadım — uydurmadım.</p>
+  <table>
+    <thead><tr><th>No</th><th>Ad</th><th>Ne işe yarar</th><th>Senin dosyandan</th></tr></thead>
+    <tbody>
+      <tr class="emin"><td class="no">1</td><td class="ad">ID</td><td>Skill’in numarası. Değiştirilmez kimlik.</td><td>101001 stroke, 101002 Sprint</td></tr>
+      <tr class="emin"><td class="no">2</td><td class="ad">İngilizce / kısa ad</td><td>Kısa ad. Bazı satırlarda boş ya da bozuk bayt var; asıl ad 3. sütunda.</td><td>stroke / Sprint</td></tr>
+      <tr class="emin"><td class="no">3</td><td class="ad">Ad</td><td>Oyunda görünen isim.</td><td>Slash, Lightning</td></tr>
+      <tr class="emin"><td class="no">4</td><td class="ad">Açıklama</td><td>Skill penceresindeki yazı.</td><td>“Inflict 70% damage”</td></tr>
+      <tr class="emin"><td class="no">5</td><td class="ad">Başlangıç animasyonu</td><td>Basınca oynayan hareket. Aynı sayı = aynı hareket.</td><td>26 vuruş, 24 buff, 16 büyü</td></tr>
+      <tr class="emin"><td class="no">6</td><td class="ad">Bitiş animasyonu</td><td>İkinci hareket. Bu dosyada neredeyse hep 0. Kuşatma aletlerinde 111, 121 gibi.</td><td>Catapult = 111</td></tr>
+      <tr class="emin"><td class="no">7</td><td class="ad">Hedef animasyonu</td><td>Hedefin oynayacağı hareket. Bu dosyada 3.678 satırın hepsi 0.</td><td>hep 0</td></tr>
+      <tr class="emin"><td class="no">8</td><td class="ad">Kendi efekti 1</td><td>Senin karakterinin üstünde çıkan efektin numarası.</td><td>vuruş 2601, buff 2701, Lightning 2301</td></tr>
+      <tr class="emin"><td class="no">9</td><td class="ad">Efekt yeri 1</td><td>O efektin vücutta nereye yapışacağı. −1 = yapışma yok.</td><td>vuruş 12, büyü 2, heal 7012, buff −1</td></tr>
+      <tr class="emin"><td class="no">10</td><td class="ad">Kendi efekti 2</td><td>İkinci kendi efekti. Neredeyse hep 0.</td><td>hep 0’a yakın</td></tr>
+      <tr class="emin"><td class="no">11</td><td class="ad">Efekt yeri 2</td><td>İkinci efektin yeri. Bu dosyada hep 0.</td><td>hep 0</td></tr>
+      <tr class="emin"><td class="no">12</td><td class="ad">Uçan efekt</td><td>Elden çıkıp hedefe giden şey: ok, top. Yakın dövüşte 0.</td><td>Counter Strike 532</td></tr>
+      <tr class="emin"><td class="no">13</td><td class="ad">Hedef efekti</td><td>Hedefe düşünce çıkan efekt.</td><td>vuruş 10002, Sprint 10029, Lightning 311</td></tr>
+      <tr class="emin"><td class="no">14</td><td class="ad">Hedef efekt yeri</td><td>Hedef efektinin vücut parçası. −1 sık.</td><td>çoğu −1</td></tr>
+      <tr class="emin"><td class="no">15</td><td class="ad">Hedef tipi</td><td>Skill kime tutulur. Aşağıda tablo var.</td><td>Sprint 1, heal 2, stroke 7</td></tr>
+      <tr class="emin"><td class="no">16</td><td class="ad">Gerekli seviye</td><td>Öğrenmek / kullanmak için karakter seviyesi.</td><td>stroke 1, Slash 3, Defense 7, Stealth 45</td></tr>
+      <tr class="emin"><td class="no">17</td><td class="ad">Skill sayfası</td><td>Skill ağacında hangi sekmede durduğu. Sınıfın kendisi değil, sayfa numarası.</td><td>1010 temel savaşçı, 1097 büyücü, 1147 rahip heal</td></tr>
+      <tr class="emin"><td class="no">18</td><td class="ad">Mana</td><td>Basınca giden MP.</td><td>stroke 2, Sprint 5, Lightning 50, Stealth 270</td></tr>
+      <tr class="emin"><td class="no">19</td><td class="ad">Can bedeli</td><td>Basınca giden HP. Çoğu skill 0.</td><td>Sacrifice 10001, Rise 100, Blaze Killer 200</td></tr>
+      <tr class="suphe"><td class="no">20</td><td class="ad">Bilinmiyor</td><td>Kısa sayı. 3.602 satırda 0. Dolu olanlar 20, 40, 60, 80, 100 ve çoğunlukla canavar vuruşu. Resmi 30 sütunluk yapıda bu alan yok; ad uydurmadım.</td><td>Smash 40, Slug 20</td></tr>
+      <tr class="emin"><td class="no">21</td><td class="ad">Silah sınıfı</td><td>Hangi silah eldeyken basılır. 0 = şart yok / temel vuruş.</td><td>yay 7, hançer tipi 1, şart yok 9, blade 11</td></tr>
+      <tr class="emin"><td class="no">22</td><td class="ad">Tüketilen eşya</td><td>Her basışta silinen eşyanın ID’si. 0 = eşya yemez.</td><td>Counter Strike ok 391010000</td></tr>
+      <tr class="emin"><td class="no">23</td><td class="ad">Hazırlık</td><td>Basılı tutma / cast. 0 = anında. Birim 0,1 sn.</td><td>stroke 0, Lightning 15 (1,5 sn), Stealth 30 (3 sn)</td></tr>
+      <tr class="emin"><td class="no">24</td><td class="ad">Bekleme</td><td>Tekrar basılana kadar geçen süre. Birim 0,1 sn.</td><td>stroke 6 (0,6 sn), Sprint 60 (6 sn), Defense 100 (10 sn), Counter Strike 600 (60 sn)</td></tr>
+      <tr class="suphe"><td class="no">25</td><td class="ad">Bilinmiyor</td><td>Ondalık. 3.676 satırda 0. Sadece “Demolition of Devil” satırlarında 1.</td><td>0,0</td></tr>
+      <tr class="emin"><td class="no">26</td><td class="ad">Kullanılmıyor</td><td>Bu dosyada 3.678 satırın hepsi 0.</td><td>0</td></tr>
+      <tr class="emin"><td class="no">27</td><td class="ad">Kullanılmıyor</td><td>Bu dosyada hepsi 0,0.</td><td>0,0</td></tr>
+      <tr class="emin"><td class="no">28</td><td class="ad">Başarı yüzdesi</td><td>Skill’in tutma ihtimali. 100 = bu tabloda hep tutar yazar.</td><td>stroke 100, Minor Healing 80, Stealth 25, bir Lightning 30 diğeri 95</td></tr>
+      <tr class="emin"><td class="no">29</td><td class="ad">Etki tablosu</td><td>Asıl etki (hasar, heal, buff) hangi yan tabloda. Aşağıda.</td><td>vuruş 1, ok 2, Lightning 3, Sprint 4, Stealth 9</td></tr>
+      <tr class="emin"><td class="no">30</td><td class="ad">İkinci etki tablosu</td><td>Varsa ikinci etki. 0 = yok. Lightning’de 4, yani büyüye ek bir buff kaydı da bağlı.</td><td>çoğu 0, Lightning 4</td></tr>
+      <tr class="emin"><td class="no">31</td><td class="ad">Menzil</td><td>Ne kadar uzağa tutulur. 0 = yapışık / kendine. 10000 = pratikte harita boyu (Escape, summon).</td><td>stroke 0, Minor 25, Lightning 35, Escape 10000</td></tr>
+      <tr class="suphe"><td class="no">32</td><td class="ad">Bilinmiyor</td><td>3.555 satırda 0. Dolu olanlar 70+ master skillerde 334, 359, 365 gibi. Ses ya da ekstra efekt numarası olabilir; kaynak bunu “bilinmiyor” diye bırakmış.</td><td>Howling Sword 334</td></tr>
+      <tr class="suphe"><td class="no">33</td><td class="ad">Bilinmiyor</td><td>0 ya da 1. 1 olanlar pet / canavar vuruşları (Slap, Leg Bite). Bayrak olduğu belli, adı değil.</td><td>Slap 1</td></tr>
+      <tr class="suphe"><td class="no">34</td><td class="ad">Bilinmiyor</td><td>Çoğu satırda gerekli seviyeyle aynı, ama hep değil. stroke: seviye 1, bu sütun 3. Minor Healing: seviye 3, bu sütun 0. O yüzden “seviye” demiyorum.</td><td>stroke 3, Sprint 1</td></tr>
+      <tr class="emin"><td class="no">35</td><td class="ad">Bağlı skill ID</td><td>Bu satırın kopyalandığı ya da ikonunu paylaştığı asıl skill. Ulus kopyalarında diğer ulusun ID’si durur.</td><td>El Morad Lightning 110715 → 109715</td></tr>
+      <tr class="suphe"><td class="no">36</td><td class="ad">Bilinmiyor</td><td>3.618 satırda 0. Kuşatma aletlerinde 3, bir yazıtta 5.</td><td>Catapult 3</td></tr>
+      <tr class="suphe"><td class="no">37</td><td class="ad">Bilinmiyor</td><td>3.626 satırda 10. Bir grup boss skillinde 5. Anlamı bu dosyadan çıkmıyor.</td><td>10</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Sütun 15 — kime tutulur</h2>
+  <ul>
+    <li><b>1</b> kendine. Sprint, Defense.</li>
+    <li><b>2</b> dost, kendin dahil. Minor Healing, Strength.</li>
+    <li><b>3</b> dost, kendin hariç.</li>
+    <li><b>4</b> parti, kendin dahil. Sacrifice.</li>
+    <li><b>5</b> sadece NPC.</li>
+    <li><b>6</b> bütün parti. Determination, Belief.</li>
+    <li><b>7</b> sadece düşman. stroke, Slash, Lightning.</li>
+    <li><b>8</b> herkes.</li>
+    <li><b>10</b> alandaki düşmanlar. Anger Explosion, provoke.</li>
+    <li><b>11</b> alandaki dostlar. Imir's Roar gibi alan bağırma.</li>
+    <li><b>12</b> alandaki herkes.</li>
+    <li><b>13</b> kendi etrafındaki alan.</li>
+    <li><b>25</b> ölü dost. Resurrection satırları.</li>
+  </ul>
+  <p class="muted">31, 32, 33, 35, 36, 37, 39, 240 gibi seyrek kodlar da var. Kaynak listedeki ana kodlar bunlar; seyrek olanlara isim yakıştırmadım.</p>
+
+  <h2>Sütun 29 — etkinin durduğu yan tablo</h2>
+  <ul>
+    <li><b>1</b> yakın dövüş. stroke, Slash. Ayrı dosya: skill_magic_1.</li>
+    <li><b>2</b> ok. Archery, Counter Strike. skill_magic_2.</li>
+    <li><b>3</b> anlık büyü. Lightning, Minor Healing, Sacrifice. skill_magic_3.</li>
+    <li><b>4</b> süreli buff. Sprint, Defense. skill_magic_4.</li>
+    <li><b>5</b> arındırma. Cure curse, Cure disease.</li>
+    <li><b>6</b> kuşatma / nesne. Catapult, köprü.</li>
+    <li><b>7</b> bağlama / kışkırtma. Binding, provoke.</li>
+    <li><b>8</b> bölge büyüsü. Escape, summon friend.</li>
+    <li><b>9</b> gizlenme. Stealth, Hide.</li>
+    <li><b>10</b> pasif / yazıt gücü. Traina's Wisdom.</li>
+    <li><b>0</b> bu ana tabloda etki kaydı bağlanmamış.</li>
+  </ul>
+  <p>Hasarın yüzde kaçı olduğu, buff’ın kaç saniye sürdüğü, hızın ne kadar arttığı <b>bu dosyada değil</b>. Onlar 29. sütunun gösterdiği yan tabloda. Örneğin Sprint’in “ne kadar hız” bilgisi skill_magic_4 içindedir; burada sadece “bu bir tip-4 buff, sayfa 1010, bekleme 6 sn” yazar.</p>
+
+  <h2>Sütun 21 — silah</h2>
+  <ul>
+    <li><b>0</b> silah şartı yazılmamış. Temel stroke, birçok büyü.</li>
+    <li><b>1</b> hançer tipi. Stab, Jab, Blood drain.</li>
+    <li><b>7</b> yay. Archery, multiple shot, Counter Strike.</li>
+    <li><b>9</b> silah gerekmez. Sprint, Defense, heal.</li>
+    <li><b>11</b> blade satırları. Magic blade, fire blade, frozen blade.</li>
+    <li><b>14</b> üç özel satır: Running, Atk Packet, Def Packet.</li>
+  </ul>
+</main>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a499426e7c9ead37',t:'MTc5MTg0MTE5MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

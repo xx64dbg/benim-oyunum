@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><title>TBL sifre adresleri</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #07080f; color: #e8e6f2;
+  font: 15px/1.5 "Segoe UI", system-ui, sans-serif; }
+header { padding: 22px 26px 16px; background: linear-gradient(180deg, #12101c, #07080f);
+  border-bottom: 1px solid #2a2440; }
+h1 { margin: 0 0 6px; font-size: 22px; letter-spacing: .3px;
+  background: linear-gradient(90deg, #5ef2ff, #d46bff); -webkit-background-clip: text;
+  background-clip: text; color: transparent; }
+.alt { color: #9a94b0; margin: 0; max-width: 78ch; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 26px 0; }
+nav a { color: #5ef2ff; text-decoration: none; border: 1px solid #2c3d55;
+  border-radius: 999px; padding: 4px 10px; font-size: 13px; }
+nav a:hover { border-color: #d46bff; color: #f0c4ff; }
+main { padding: 8px 22px 40px; }
+.not { color: #b7b0cc; max-width: 82ch; }
+.kutu { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+.rozet { background: #12141f; border: 1px solid #2a2440; border-radius: 8px;
+  padding: 8px 10px; font-size: 13px; }
+.rozet b { color: #5ef2ff; font-family: Consolas, ui-monospace, monospace; }
+input.ara { width: min(420px, 100%); margin: 12px 0; background: #0c0e16; color: #f4f1ff;
+  border: 1px solid #3a2f55; border-radius: 8px; padding: 8px 12px; font: inherit; }
+input.ara:focus { outline: 2px solid #5ef2ff; border-color: transparent; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; vertical-align: top; border-bottom: 1px solid #1c2030; }
+th { position: sticky; top: 0; background: #12101c; color: #d46bff; font-size: 12px;
+  letter-spacing: .05em; text-transform: uppercase; }
+tr:hover td { background: #14122a; }
+.adr { font-family: Consolas, ui-monospace, monospace; color: #5ef2ff; white-space: nowrap; }
+.ad { color: #f2e7ff; font-weight: 650; }
+.tur { color: #c6ff6a; font-family: Consolas, ui-monospace, monospace; font-size: 13px; }
+.zayif { color: #8d87a3; }
+footer { color: #6e6880; font-size: 12px; padding: 8px 26px 28px; }
+</style></head><body>
+<header><h1>TBL sifre adresleri</h1>
+<p class="alt">KnightOnLine.exe · 10.299.392 bayt · 32-bit · ImageBase 0x400000 · ASLR kapalı, taban hep 0x400000.</p>
+</header>
+<nav><a href="opcode_yonlendirme.html" style="">Opcode → fonksiyon</a><a href="index.html" style="">Giriş</a><a href="fonksiyonlar.html" style="">Fonksiyonlar</a><a href="isaretciler.html" style="">İşaretçiler</a><a href="iat.html" style="">IAT</a><a href="soket_ofsetleri.html" style="">Soket ofsetleri</a><a href="tbl_kripto.html" style="border-color:#d46bff;color:#f0c4ff">TBL kripto</a><a href="opcode.html" style="">Opcode</a></nav>
+<main>
+<p class="not">Tablo dosyasi iki kilitlidir. Once DES, sonra akan XOR. Parola exe icinde duz string degildir; yigina bayt bayt yazilir: <b>8sgpV&amp;22dsdLg3k</b>.</p>
+<div class="kutu">
+  <div class="rozet">XOR r <b>0x0418</b></div>
+  <div class="rozet">c1 <b>0x1804</b></div>
+  <div class="rozet">c2 <b>0x8041</b></div>
+  <div class="rozet">87 yukleme noktasi, anahtarlar ayni</div>
+</div>
+<p class="not">Cozulunce duzen: 5 bayt onek, sutun sayisi, tipler, satir sayisi, satirlar. Bu skill dosyasinda onek sifir, 37 sutun, 3678 satir.</p>
+<table><thead><tr><th>VA</th><th>Ne</th><th>Not</th></tr></thead><tbody><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc713c0&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;16 bayt sabit&lt;/span&gt; dosya sihri. 4c26437f80f1579879fcaf2686d6208e"><td class="adr"><span class="adr">0xC713C0</span></td><td class=""><span class="tur">16 bayt sabit</span></td><td class="">Dosya sihri. 4C26437F80F1579879FCAF2686D6208E</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc71380&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;16 x dword&lt;/span&gt; des kaydirma tablosu. 1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,1"><td class="adr"><span class="adr">0xC71380</span></td><td class=""><span class="tur">16 x DWORD</span></td><td class="">DES kaydirma tablosu. 1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,1</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc713d0&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;48 bayt&lt;/span&gt; pc2. standart des"><td class="adr"><span class="adr">0xC713D0</span></td><td class=""><span class="tur">48 bayt</span></td><td class="">PC2. Standart DES</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc71400&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;48 bayt&lt;/span&gt; e genisletme. standart des"><td class="adr"><span class="adr">0xC71400</span></td><td class=""><span class="tur">48 bayt</span></td><td class="">E genisletme. Standart DES</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc71430&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;8 x 256 bayt&lt;/span&gt; s-kutulari. her kutu 0x100 bayt arayla"><td class="adr"><span class="adr">0xC71430</span></td><td class=""><span class="tur">8 x 256 bayt</span></td><td class="">S-kutulari. Her kutu 0x100 bayt arayla</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc71c30&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;32 bayt&lt;/span&gt; p permütasyonu. standart des"><td class="adr"><span class="adr">0xC71C30</span></td><td class=""><span class="tur">32 bayt</span></td><td class="">P permütasyonu. Standart DES</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xda5310&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;56 bayt 0/1&lt;/span&gt; 1. tuz"><td class="adr"><span class="adr">0xDA5310</span></td><td class=""><span class="tur">56 bayt 0/1</span></td><td class="">1. tuz</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xda5348&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;56 bayt 0/1&lt;/span&gt; 2. tuz"><td class="adr"><span class="adr">0xDA5348</span></td><td class=""><span class="tur">56 bayt 0/1</span></td><td class="">2. tuz</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xda5380&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;56 bayt 0/1&lt;/span&gt; 3. tuz"><td class="adr"><span class="adr">0xDA5380</span></td><td class=""><span class="tur">56 bayt 0/1</span></td><td class="">3. tuz</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xda53b8&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;56 bayt 0/1&lt;/span&gt; 4. tuz"><td class="adr"><span class="adr">0xDA53B8</span></td><td class=""><span class="tur">56 bayt 0/1</span></td><td class="">4. tuz</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;0xc6a62c&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;iat&lt;/span&gt; ntohl. basliktaki uzunluk alanini cevirir"><td class="adr"><span class="adr">0xC6A62C</span></td><td class=""><span class="tur">IAT</span></td><td class="">ntohl. Basliktaki uzunluk alanini cevirir</td></tr></tbody></table></main>
+<footer>Salt okuma notu. Adresler bu exe içindir. Başka sürümde kayar.</footer>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4994625695be346',t:'MTc5MTg0MTM0Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body></html>

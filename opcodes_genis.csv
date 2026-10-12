@@ -1,0 +1,147 @@
+opcode,isim,aciklama,kaynak
+0x01,WIZ_LOGIN,Account Login,OpenKO 1.298 + v2000
+0x02,WIZ_NEW_CHAR,Create Character DB,OpenKO 1.298 + v2000
+0x03,WIZ_DEL_CHAR,Delete Character DB,OpenKO 1.298 + v2000
+0x04,WIZ_SEL_CHAR,Select Character,OpenKO 1.298 + v2000
+0x05,WIZ_SEL_NATION,Select Nation,OpenKO 1.298 + v2000
+0x06,WIZ_MOVE,Move ( 1 Second ),OpenKO 1.298 + v2000
+0x07,WIZ_USER_INOUT,"User Info Insert, delete",OpenKO 1.298 + v2000
+0x08,WIZ_ATTACK,General Attack,OpenKO 1.298 + v2000
+0x09,WIZ_ROTATE,Rotate,OpenKO 1.298 + v2000
+0x0A,WIZ_NPC_INOUT,"Npc Info Insert, delete",OpenKO 1.298 + v2000
+0x0B,WIZ_NPC_MOVE,Npc Move ( 1 Second ),OpenKO 1.298 + v2000
+0x0C,WIZ_ALLCHAR_INFO_REQ,Account All Character Info Request,OpenKO 1.298 + v2000
+0x0D,WIZ_GAMESTART,"Request Other User, Npc Info",OpenKO 1.298 + v2000
+0x0E,WIZ_MYINFO,User Detail Data Download,OpenKO 1.298 + v2000
+0x0F,WIZ_LOGOUT,Request Logout,OpenKO 1.298 + v2000
+0x10,WIZ_CHAT,User Chatting..,OpenKO 1.298 + v2000
+0x11,WIZ_DEAD,User Dead,OpenKO 1.298 + v2000
+0x12,WIZ_REGENE,User	Regeneration,OpenKO 1.298 + v2000
+0x13,WIZ_TIME,Game Timer,OpenKO 1.298 + v2000
+0x14,WIZ_WEATHER,Game Weather,OpenKO 1.298 + v2000
+0x15,WIZ_REGIONCHANGE,Region UserInfo Receive,OpenKO 1.298 + v2000
+0x16,WIZ_REQ_USERIN,Client Request UnRegistered User List,OpenKO 1.298 + v2000
+0x17,WIZ_HP_CHANGE,Current HP Download,OpenKO 1.298 + v2000
+0x18,WIZ_MSP_CHANGE,Current MP Download,OpenKO 1.298 + v2000
+0x19,WIZ_ITEM_LOG,Send To Agent for Writing Log,OpenKO 1.298 + v2000
+0x1A,WIZ_EXP_CHANGE,Current EXP Download,OpenKO 1.298 + v2000
+0x1B,WIZ_LEVEL_CHANGE,"Max HP, MP, SP, Weight, Exp Download",OpenKO 1.298 + v2000
+0x1C,WIZ_NPC_REGION,Npc Region Change Receive,OpenKO 1.298 + v2000
+0x1D,WIZ_REQ_NPCIN,Client Request UnRegistered NPC List,OpenKO 1.298 + v2000
+0x1E,WIZ_WARP,User Remote Warp,OpenKO 1.298 + v2000
+0x1F,WIZ_ITEM_MOVE,User Item Move,OpenKO 1.298 + v2000
+0x20,WIZ_NPC_EVENT,User Click Npc Event,OpenKO 1.298 + v2000
+0x21,WIZ_ITEM_TRADE,Item Trade,OpenKO 1.298 + v2000
+0x22,WIZ_TARGET_HP,Attack Result Target HP,OpenKO 1.298 + v2000
+0x23,WIZ_ITEM_DROP,Zone Item Insert,OpenKO 1.298 + v2000
+0x24,WIZ_BUNDLE_OPEN_REQ,Zone Item list Request,OpenKO 1.298 + v2000
+0x25,WIZ_TRADE_NPC,ITEM Trade start,OpenKO 1.298 + v2000
+0x26,WIZ_ITEM_GET,Zone Item Get,OpenKO 1.298 + v2000
+0x27,WIZ_ZONE_CHANGE,Zone Change,OpenKO 1.298 + v2000
+0x28,WIZ_POINT_CHANGE,"Str, Sta, dex, intel, cha, point up down",OpenKO 1.298 + v2000
+0x29,WIZ_STATE_CHANGE,User Sitdown or Stand,OpenKO 1.298 + v2000
+0x2A,WIZ_LOYALTY_CHANGE,Nation Contribution,OpenKO 1.298 + v2000
+0x2B,WIZ_VERSION_CHECK,Client version check,OpenKO 1.298 + v2000
+0x2C,WIZ_CRYPTION,Cryption,OpenKO 1.298 + v2000
+0x2D,WIZ_USERLOOK_CHANGE,User Slot Item Resource Change,OpenKO 1.298 + v2000
+0x2E,WIZ_NOTICE,Update Notice Alarm,OpenKO 1.298 + v2000
+0x2F,WIZ_PARTY,Party Related Packet,OpenKO 1.298 + v2000
+0x30,WIZ_EXCHANGE,Exchange Related Packet,OpenKO 1.298 + v2000
+0x31,WIZ_MAGIC_PROCESS,Magic Related Packet,OpenKO 1.298 + v2000
+0x32,WIZ_SKILLPT_CHANGE,User changed particular skill point,OpenKO 1.298 + v2000
+0x33,WIZ_OBJECT_EVENT,Map Object Event Occur ( ex : Bind Point Setting ),OpenKO 1.298 + v2000
+0x34,WIZ_CLASS_CHANGE,10 level over can change class,OpenKO 1.298 + v2000
+0x35,WIZ_CHAT_TARGET,Select Private Chanting User,OpenKO 1.298 + v2000
+0x36,WIZ_CONCURRENTUSER,Current Game User Count,OpenKO 1.298 + v2000
+0x37,WIZ_DATASAVE,User GameData DB Save Request,OpenKO 1.298 + v2000
+0x38,WIZ_DURATION,Item Durability Change,OpenKO 1.298 + v2000
+0x39,WIZ_TIMENOTIFY,Time Adaption Magic Time Notify Packet ( 2 Seconds ),OpenKO 1.298 + v2000
+0x3A,WIZ_REPAIR_NPC,"Item Trade, Upgrade and Repair",OpenKO 1.298 + v2000
+0x3B,WIZ_ITEM_REPAIR,Item Repair Processing,OpenKO 1.298 + v2000
+0x3C,WIZ_KNIGHTS_PROCESS,Knights Related Packet..,OpenKO 1.298 + v2000
+0x3D,WIZ_ITEM_COUNT_CHANGE,Item cout change.,OpenKO 1.298 + v2000
+0x3E,WIZ_KNIGHTS_LIST,All Knights List Info download,OpenKO 1.298 + v2000
+0x3F,WIZ_ITEM_REMOVE,Item Remove from inventory,OpenKO 1.298 + v2000
+0x40,WIZ_OPERATOR,Operator Authority Packet,OpenKO 1.298 + v2000
+0x41,WIZ_SPEEDHACK_CHECK,Speed Hack Using Check,OpenKO 1.298 + v2000
+0x42,WIZ_COMPRESS_PACKET,Data Compressing Packet,OpenKO 1.298 + v2000
+0x43,WIZ_SERVER_CHECK,Server Status Check Packet,OpenKO 1.298 + v2000
+0x44,WIZ_CONTINOUS_PACKET,Region Data Packet,OpenKO 1.298 + v2000
+0x45,WIZ_WAREHOUSE,"Warehouse Open, In, Out",OpenKO 1.298 + v2000
+0x46,WIZ_SERVER_CHANGE,When you change the server,OpenKO 1.298 + v2000
+0x47,WIZ_REPORT_BUG,Report Bug to the manager,OpenKO 1.298 + v2000
+0x48,WIZ_HOME,'Come back home' by Seo Taeji & Boys,OpenKO 1.298 + v2000
+0x49,WIZ_FRIEND_PROCESS,Get the status of your friend,OpenKO 1.298 + v2000
+0x4A,WIZ_GOLD_CHANGE,When you get the gold of your enemy.,OpenKO 1.298 + v2000
+0x4B,WIZ_WARP_LIST,Warp List by NPC or Object,OpenKO 1.298 + v2000
+0x4C,WIZ_VIRTUAL_SERVER,"Battle zone Server Info packet	(IP, Port)",OpenKO 1.298 + v2000
+0x4D,WIZ_ZONE_CONCURRENT,Battle zone concurrent users request packet,OpenKO 1.298 + v2000
+0x4E,WIZ_CORPSE,To have your corpse have an ID on top of it.,OpenKO 1.298 + v2000
+0x4F,WIZ_PARTY_BBS,For the party wanted bulletin board service..,OpenKO 1.298 + v2000
+0x50,WIZ_MARKET_BBS,For the market bulletin board service...,OpenKO 1.298 + v2000 + v2000
+0x51,WIZ_KICKOUT,Account ID forbid duplicate connection,OpenKO 1.298 + v2000
+0x52,WIZ_CLIENT_EVENT,Client Event (for quest),OpenKO 1.298 + v2000
+0x53,WIZ_MAP_EVENT,클라이언트에서 무슨 에코로 쓰고 있데요.,OpenKO 1.298 + v2000
+0x54,WIZ_WEIGHT_CHANGE,Notify change of weight,OpenKO 1.298 + v2000
+0x55,WIZ_SELECT_MSG,Select Event Message...,OpenKO 1.298 + v2000
+0x56,WIZ_NPC_SAY,Select Event Message...,OpenKO 1.298 + v2000
+0x57,WIZ_BATTLE_EVENT,Battle Event Result,OpenKO 1.298 + v2000
+0x58,WIZ_AUTHORITY_CHANGE,Authority change,OpenKO 1.298 + v2000
+0x59,WIZ_EDIT_BOX,Activate/Receive info from Input_Box.,OpenKO 1.298 + v2000
+0x5A,WIZ_SANTA,Activate motherfucking Santa Claus!!! :(,OpenKO 1.298 + v2000
+0x5B,WIZ_ITEM_UPGRADE,,OpenKO 1.298 + v2000
+0x5C,WIZ_PACKET1,,OpenKO 1.298 + v2000
+0x5D,WIZ_PACKET2,,OpenKO 1.298 + v2000
+0x5E,WIZ_ZONEABILITY,,OpenKO 1.298 + v2000
+0x5F,WIZ_EVENT,,OpenKO 1.298 + v2000
+0x60,WIZ_STEALTH,stealth related.,OpenKO 1.298 + v2000
+0x61,WIZ_ROOM_PACKETPROCESS,room system,OpenKO 1.298 + v2000
+0x62,WIZ_ROOM,,OpenKO 1.298 + v2000
+0x63,WIZ_ROOM_MATCH,new clan,OpenKO 1.298 + v2000
+0x64,WIZ_QUEST,,OpenKO 1.298 + v2000
+0x65,WIZ_PP_CARD,login,OpenKO 1.298 + v2000
+0x66,WIZ_KISS,,OpenKO 1.298 + v2000
+0x67,WIZ_RECOMMEND_USER,,OpenKO 1.298 + v2000
+0x68,WIZ_MERCHANT,,OpenKO 1.298 + v2000
+0x69,WIZ_MERCHANT_INOUT,,OpenKO 1.298 + v2000
+0x6A,WIZ_SHOPPING_MALL,,OpenKO 1.298 + v2000
+0x6B,WIZ_SERVER_INDEX,,OpenKO 1.298 + v2000
+0x6C,WIZ_EFFECT,,OpenKO 1.298 + v2000
+0x6D,WIZ_SIEGE,,OpenKO 1.298 + v2000
+0x6E,WIZ_NAME_CHANGE,,OpenKO 1.298 + v2000
+0x6F,WIZ_WEBPAGE,,OpenKO 1.298 + v2000
+0x70,WIZ_CAPE,,OpenKO 1.298 + v2000
+0x71,WIZ_PREMIUM,,OpenKO 1.298 + v2000
+0x72,WIZ_HACKTOOL,,OpenKO 1.298 + v2000
+0x73,WIZ_RENTAL,,OpenKO 1.298 + v2000
+0x74,WIZ_REWARD_ITEMS,sreli item,OpenKO 1.298 + v2000
+0x75,WIZ_CHALLENGE,,OpenKO 1.298 + v2000
+0x76,WIZ_PET,,OpenKO 1.298 + v2000
+0x77,WIZ_CHINA,we shouldn't need to worry about this,OpenKO 1.298 + v2000
+0x78,WIZ_KING,,OpenKO 1.298 + v2000
+0x79,WIZ_SKILLDATA,,OpenKO 1.298 + v2000
+0x7A,WIZ_PROGRAMCHECK,,OpenKO 1.298 + v2000
+0x7B,WIZ_BIFROST,,OpenKO 1.298 + v2000
+0x7C,WIZ_REPORT,,v2000 (sizdirilmis kaynak)
+0x7D,WIZ_LOGOSSHOUT,,v2000 (sizdirilmis kaynak)
+0x7E,WIZ_PACKET6,,v2000 (sizdirilmis kaynak)
+0x7F,WIZ_SERVER_KILL,NOTE(srmeier): testing this debug string functionality,OpenKO 1.298 + v2000
+0x80,WIZ_RANK,,v2000 (sizdirilmis kaynak)
+0x81,WIZ_STORY,,v2000 (sizdirilmis kaynak)
+0x82,WIZ_PACKET8,,v2000 (sizdirilmis kaynak)
+0x83,WIZ_PACKET9,,v2000 (sizdirilmis kaynak)
+0x84,WIZ_PACKET10,,v2000 (sizdirilmis kaynak)
+0x85,WIZ_PACKET11,,v2000 (sizdirilmis kaynak)
+0x86,WIZ_MINING,,v2000 (sizdirilmis kaynak)
+0x87,WIZ_HELMET,,v2000 (sizdirilmis kaynak)
+0x88,WIZ_PVP,,v2000 (sizdirilmis kaynak)
+0x89,WIZ_CHANGE_HAIR,Changes hair colour/facial features at character selection,v2000 (sizdirilmis kaynak)
+0x8A,WIZ_PACKET12,,v2000 (sizdirilmis kaynak)
+0x8B,WIZ_PACKET13,,v2000 (sizdirilmis kaynak)
+0x8C,WIZ_PACKET14,,v2000 (sizdirilmis kaynak)
+0x8D,WIZ_PACKET15,,v2000 (sizdirilmis kaynak)
+0x8E,WIZ_PACKET16,,v2000 (sizdirilmis kaynak)
+0x8F,WIZ_PACKET17,,v2000 (sizdirilmis kaynak)
+0x90,WIZ_DEATH_LIST,,v2000 (sizdirilmis kaynak)
+0x91,WIZ_CLANPOINTS_BATTLE,not sure,v2000 (sizdirilmis kaynak)
+0xFE,WIZ_DEBUG_STRING_PACKET,,OpenKO 1.298 + v2000

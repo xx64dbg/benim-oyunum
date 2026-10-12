@@ -1,0 +1,38 @@
+adres_va,tur,aciklama
+0xF50FD0,CAPISocket*,Ana ag nesnesi (oyun soketi); Send this'i
+0xF50FD4,CAPISocket*,Ikinci soket nesnesi
+0xF50FE0,nesne*,Oyun yoneticisi; +0x178 oyunda bayragi
+0xF50FE4,nesne*,Olay zinciri
+0xF50FE8,nesne*,Olay zinciri
+0xF50FEC,nesne*,Olay zinciri
+0xF50FF0,CGameProcedure*,Aktif sahne nesnesi (dispatch vtable kaynagi)
+0xF50FF4,HWND,Pencere kolu
+0xF51004,nesne*,"Kok uygulama nesnesi (+0x20C sahne, +0x4DC, +0x7EC)"
+0xF51098,DWORD,En son islenen opcode
+0xF5108D,BYTE,El sikisma donen sayac bayti (1..0xFA)
+0xF52800,BYTE,Tek seferlik init bayragi
+0xEADFD4,BYTE,Send giris mod/log bayragi
+0xED03AC,nesne,Send kritik bolumu/sira
+0xED03B4,DWORD,Send tampon isaretcisi
+0xED03B8,BYTE,Send bayraklari
+0xED03D0,DWORD,Sifreleme durum sayaci
+0xED03D4,DWORD,Sifreleme durum sayaci
+0xED03D8,WORD,Sifreleme durum sayaci
+0xED03E0,nesne,Sifreleme nesnesi (JvCryption tarzi)
+0xDBB4C4,DWORD,Zamanlayici geri-cagri sayisi
+0xDBB524,DWORD,CRT guvenlik cerezi
+0xDFCB68,DWORD,Baglanti durumu kapisi
+0xF5F624,dizi,10 slotluk periyodik geri-cagri tablosu
+0x4DA76C,tablo,Taban switch case tablosu (diskte sifreli)
+0x4DA794,tablo,Taban switch opcode index tablosu (diskte sifreli)
+0x4F0A2C,tablo,Oyun-ici switch case tablosu (diskte sifreli)
+0x4F0A50,tablo,Oyun-ici switch opcode index tablosu (diskte sifreli)
+0xC6FFA4,vtable,CGameProcMain vtable (slot2=0xF0870)
+0xC6A618,IAT,WSOCK32!send
+0xC6A628,IAT,WSOCK32!recv
+0xC6A610,IAT,WSOCK32!connect
+0xC6A60C,IAT,WSOCK32!WSAAsyncSelect
+0xC6A620,IAT,WSOCK32!ioctlsocket
+0xC6A614,IAT,WSOCK32!htons
+0xC6A61C,IAT,WSOCK32!closesocket
+0xC6A600,IAT,WSOCK32!socket

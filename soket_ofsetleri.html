@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><title>Soket nesnesi ofsetleri</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #07080f; color: #e8e6f2;
+  font: 15px/1.5 "Segoe UI", system-ui, sans-serif; }
+header { padding: 22px 26px 16px; background: linear-gradient(180deg, #12101c, #07080f);
+  border-bottom: 1px solid #2a2440; }
+h1 { margin: 0 0 6px; font-size: 22px; letter-spacing: .3px;
+  background: linear-gradient(90deg, #5ef2ff, #d46bff); -webkit-background-clip: text;
+  background-clip: text; color: transparent; }
+.alt { color: #9a94b0; margin: 0; max-width: 78ch; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 26px 0; }
+nav a { color: #5ef2ff; text-decoration: none; border: 1px solid #2c3d55;
+  border-radius: 999px; padding: 4px 10px; font-size: 13px; }
+nav a:hover { border-color: #d46bff; color: #f0c4ff; }
+main { padding: 8px 22px 40px; }
+.not { color: #b7b0cc; max-width: 82ch; }
+.kutu { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+.rozet { background: #12141f; border: 1px solid #2a2440; border-radius: 8px;
+  padding: 8px 10px; font-size: 13px; }
+.rozet b { color: #5ef2ff; font-family: Consolas, ui-monospace, monospace; }
+input.ara { width: min(420px, 100%); margin: 12px 0; background: #0c0e16; color: #f4f1ff;
+  border: 1px solid #3a2f55; border-radius: 8px; padding: 8px 12px; font: inherit; }
+input.ara:focus { outline: 2px solid #5ef2ff; border-color: transparent; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; vertical-align: top; border-bottom: 1px solid #1c2030; }
+th { position: sticky; top: 0; background: #12101c; color: #d46bff; font-size: 12px;
+  letter-spacing: .05em; text-transform: uppercase; }
+tr:hover td { background: #14122a; }
+.adr { font-family: Consolas, ui-monospace, monospace; color: #5ef2ff; white-space: nowrap; }
+.ad { color: #f2e7ff; font-weight: 650; }
+.tur { color: #c6ff6a; font-family: Consolas, ui-monospace, monospace; font-size: 13px; }
+.zayif { color: #8d87a3; }
+footer { color: #6e6880; font-size: 12px; padding: 8px 26px 28px; }
+</style></head><body>
+<header><h1>Soket nesnesi ofsetleri</h1>
+<p class="alt">KnightOnLine.exe · 10.299.392 bayt · 32-bit · ImageBase 0x400000 · ASLR kapalı, taban hep 0x400000.</p>
+</header>
+<nav><a href="opcode_yonlendirme.html" style="">Opcode → fonksiyon</a><a href="index.html" style="">Giriş</a><a href="fonksiyonlar.html" style="">Fonksiyonlar</a><a href="isaretciler.html" style="">İşaretçiler</a><a href="iat.html" style="">IAT</a><a href="soket_ofsetleri.html" style="border-color:#d46bff;color:#f0c4ff">Soket ofsetleri</a><a href="tbl_kripto.html" style="">TBL kripto</a><a href="opcode.html" style="">Opcode</a></nav>
+<main>
+<p class="not">Ana soket nesnesi <span class="adr">[0xF50FD0]</span> adresindedir. Asagidaki sayilar o nesnenin icindeki alandir, dosya adresi degil. Ikinci soket <span class="adr">[0xF50FD4]</span>.</p>
+<div class="kutu">
+  <div class="rozet">baslik <b>0xAA55</b></div>
+  <div class="rozet">kuyruk <b>0x55AA</b></div>
+  <div class="rozet">pencere mesaji <b>0x41F</b></div>
+  <div class="rozet">paket sifre nesnesi <b>0xED03E0</b></div>
+  <div class="rozet">anahtar <b>0x20128966 / 0x12075001</b></div>
+</div>
+<table><thead><tr><th>Nesne ofseti</th><th>Tur</th><th>Anlam</th></tr></thead><tbody><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0x08&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;socket&lt;/span&gt; gecersizse -1"><td class="adr"><span class="adr">+0x08</span></td><td class=""><span class="tur">SOCKET</span></td><td class="">Gecersizse -1</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0x9c&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;byte&lt;/span&gt; baglanti durumu"><td class="adr"><span class="adr">+0x9C</span></td><td class=""><span class="tur">BYTE</span></td><td class="">Baglanti durumu</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0xa0&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;tampon&lt;/span&gt; alma tamponu, 0x40000 bayt"><td class="adr"><span class="adr">+0xA0</span></td><td class=""><span class="tur">tampon</span></td><td class="">Alma tamponu, 0x40000 bayt</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0x400b8&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;bolge&lt;/span&gt; sifre alani baslangici"><td class="adr"><span class="adr">+0x400B8</span></td><td class=""><span class="tur">bolge</span></td><td class="">Sifre alani baslangici</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0x400d8&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;word/dword&lt;/span&gt; port"><td class="adr"><span class="adr">+0x400D8</span></td><td class=""><span class="tur">WORD/DWORD</span></td><td class="">Port</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0x400dc&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;dword&lt;/span&gt; el sikisma modu. 0 duz, degilse sayacli"><td class="adr"><span class="adr">+0x400DC</span></td><td class=""><span class="tur">DWORD</span></td><td class="">El sikisma modu. 0 duz, degilse sayacli</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0x400e4&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;kuyruk&lt;/span&gt; gelen paket kuyrugu"><td class="adr"><span class="adr">+0x400E4</span></td><td class=""><span class="tur">kuyruk</span></td><td class="">Gelen paket kuyrugu</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0x40100&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;dword&lt;/span&gt; kuyruktaki paket sayisi"><td class="adr"><span class="adr">+0x40100</span></td><td class=""><span class="tur">DWORD</span></td><td class="">Kuyruktaki paket sayisi</td></tr><tr data-q="&lt;span class=&quot;adr&quot;&gt;+0x40104&lt;/span&gt; &lt;span class=&quot;tur&quot;&gt;byte&lt;/span&gt; gonderme izin bayragi"><td class="adr"><span class="adr">+0x40104</span></td><td class=""><span class="tur">BYTE</span></td><td class="">Gonderme izin bayragi</td></tr></tbody></table></main>
+<footer>Salt okuma notu. Adresler bu exe içindir. Başka sürümde kayar.</footer>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4994666b940e346',t:'MTc5MTg0MTM1Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
